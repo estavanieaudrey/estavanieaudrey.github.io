@@ -1,0 +1,133 @@
+
+.card {
+    margin: 2vh;
+    margin: 2vw;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.card:hover .card-title {
+    opacity: 1;
+    visibility: visible;
+    transition: c;
+}
+
+.card-title {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.fa-sharp {
+    font-size: 10vh;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+}
+
+.carousel-inner {
+    width: auto;
+    height: auto;
+}
+
+.navbar {
+    /* background-color: #70bfff; */
+    /* position: sticky; */
+    top: 0;
+    z-index: 100;
+}
+
+.title {
+    text-transform: uppercase;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+
+}
+
+.fitAp {
+    animation: 2s ease-in-out 0.5s forwards;
+    padding-top: 5vh;
+    padding-bottom: 8vh;
+    font-size: 100px;
+}
+
+.prog {
+    text-transform: uppercase;
+    /* margin-top: 10%; */
+    margin-bottom: 10vh;
+    font-size: 100px;
+}
+
+.image-home {
+    margin-top: 20vh;
+    margin-bottom: 30vh;
+}
+
+.nav-link {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #031D44;
+    padding: 20px 0px;
+    margin-right: 20px;
+    display: inline-block;
+    position: relative;
+    opacity: 0.75;
+}
+
+.nav-link:hover {
+    opacity: 1;
+}
+
+.nav-link::before {
+    transition: 300ms;
+    height: 2px;
+    content: "";
+    position: absolute;
+    background-color: rgb(209, 212, 220);
+}
+
+.nav-link-img {
+    color: #031D44;
+    padding-top: 15px;
+    margin-right: 20px;
+    display: inline-block;
+    position: relative;
+    opacity: 0.75;
+}
+
+.nav-link-img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.nav-link-ltr::before {
+    width: 0%;
+    bottom: 10px;
+}
+
+.nav-link-ltr:hover::before {
+    width: 100%;
+}
+
+#dropdown-products {
+    display: none;
+}
+
+#menu-products:hover #dropdown-products {
+    display: block;
+}
+
+.carousel-control-prev-icon{
+    color: #031D44 !important;
+}
+
+.carousel-control-next-icon{
+    color: #031D44 !important;
+}
