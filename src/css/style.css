@@ -1,3 +1,11 @@
+.background {
+    width: auto;
+    height: auto;
+    background-image: url(/src/images/bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 .card {
     margin: 2vh;
@@ -30,10 +38,11 @@
     transform: scale(1.1);
 }
 
-.carousel-inner {
+/* .carousel-inner {
     width: auto;
     height: auto;
-}
+    justify-content: center;
+} */
 
 .navbar {
     /* background-color: #70bfff; */
@@ -45,12 +54,12 @@
 .title {
     text-transform: uppercase;
     margin-top: 20vh;
-    margin-bottom: 20vh;
-
+    margin-bottom: 10vh;
+    text-align: center;
+    color: rgb(207, 193, 161);
 }
 
 .fitAp {
-    animation: 2s ease-in-out 0.5s forwards;
     padding-top: 5vh;
     padding-bottom: 8vh;
     font-size: 100px;
@@ -63,17 +72,17 @@
     font-size: 100px;
 }
 
-.image-home {
+/* .image-home {
     margin-top: 20vh;
     margin-bottom: 30vh;
-}
+} */
 
 .nav-link {
     font-weight: bold;
     font-size: 14px;
     text-transform: uppercase;
     text-decoration: none;
-    color: #031D44;
+    color: #ffffff;
     padding: 20px 0px;
     margin-right: 20px;
     display: inline-block;
@@ -94,7 +103,7 @@
 }
 
 .nav-link-img {
-    color: #031D44;
+    color: #ffffff;
     padding-top: 15px;
     margin-right: 20px;
     display: inline-block;
@@ -124,10 +133,17 @@
     display: block;
 }
 
-.carousel-control-prev-icon{
-    color: #031D44 !important;
+.nav-fitme {
+    color: #ffffff;
+    font-size: 30px;
 }
 
-.carousel-control-next-icon{
-    color: #031D44 !important;
+.carousel-item {
+    left: 50%;
+    transform: translateX(-25%);
+    position: relative;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 5% !important;
 }

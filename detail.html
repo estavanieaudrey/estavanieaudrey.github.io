@@ -48,30 +48,34 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-sm">
-        <div class="container-fluid ">
-            <a class="navbar-brand" href="index.html"><img src="/src/images/logo.png"
-                    style="height: 100px; height: 100px; margin-left: 20vh;"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
-                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-black border-bottom border-body"
+        style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="src/images/logo.png" alt="Logo" width="90" height="90"
+                    class="d-inline-block"> FitME</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active nav-link-ltr " aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active nav-link-ltr" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-ltr" href="#program">Programs</a>
+                        <a class="nav-link nav-link-ltr" href="#">Programs</a>
                     </li>
+                    <button class="btn btn-outline-primary" onclick="installApp()">Instal</button>
                 </ul>
             </div>
         </div>
     </nav>
 
+
     <!-- isi -->
 
     <div class="d-flex flex-row col-12">
+        <button class="btn btn-outline-primary" onclick="homePage()">back</button>
         <h1 class="detailTitle">
 
         </h1>
@@ -83,9 +87,6 @@
         </p>
 
     </div>
-
-
-
 </body>
 
 <script defer src="/src/js/material.min.js"></script>
@@ -94,12 +95,16 @@
 <script src="/src/js/idb.js"></script>
 <script src="/src/js/utility.js"></script>
 <script src="/src/js/app.js"></script>
-<!-- <script src="/src/js/feed.js"></script> -->
+<script src="/src/js/feed.js"></script>
 
 <script>
     document.querySelector('.detailTitle').innerHTML = localStorage.title
-    document.querySelector('.detailImg').innerHTML = '<img src="'+localStorage.image+'">'
+    document.querySelector('.detailImg').innerHTML = '<img src="' + localStorage.image + '">'
     document.querySelector('.detailDesc').innerHTML = localStorage.desc
+
+    function homePage() {
+        window.location.href = "index.html";
+    }
 </script>
 </body>
 
