@@ -27,7 +27,7 @@ function createCard(data, index) {
 
 function openDetail(index){
   // alert(workouts[index].title)
-  localStorage.title = workouts[index].title
+  localStorage.judul = workouts[index].title
   localStorage.image = workouts[index].image
   localStorage.desc = workouts[index].desc  
   // localStorage.title = workouts[index].title
@@ -66,7 +66,10 @@ fetch(url)
     }
     // workouts = data; //ambil dari firebase
     updateUI(workouts); 
+  }).catch(function(){
+    window.location.href = "offline.html";
   });
+  
 
 if ('indexedDB' in window) {
   readAllData('posts')
