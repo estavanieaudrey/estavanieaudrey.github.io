@@ -64,7 +64,7 @@
                         <a class="nav-link nav-link-ltr" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-ltr" href="#program">Programs</a>
+                        <a class="nav-link nav-link-ltr" href="index.html/#program">Programs</a>
                     </li>
                     <button class="btn btn-outline-dark" onclick="installApp()">Instal</button>
                 </ul>
@@ -99,9 +99,10 @@
 <script src="/src/js/feed.js"></script>
 
 <script>
-    document.querySelector('.detailTitle').innerHTML = localStorage.judul
-    document.querySelector('.detailImg').innerHTML = '<img src="' + localStorage.image + '">'
-    document.querySelector('.detailDesc').innerHTML = localStorage.desc
+    var isi = localStorage.getItem(localStorage.getItem('i'));
+    document.querySelector('.detailTitle').innerHTML = JSON.parse(isi)[1];
+    document.querySelector('.detailImg').innerHTML = '<img src="' + JSON.parse(isi)[2]; + '">'
+    document.querySelector('.detailDesc').innerHTML = JSON.parse(isi)[3];
 
     function homePage() {
         window.location.href = "index.html";

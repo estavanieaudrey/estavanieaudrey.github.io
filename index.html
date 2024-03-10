@@ -83,9 +83,9 @@
               <a class="nav-link nav-link-ltr" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-ltr" href="#program">Programs</a>
+              <a class="program-link nav-link nav-link-ltr" href="#program">Programs</a>
             </li>
-            <button class="btn btn-outline-dark" onclick="installApp()">Instal</button>
+            <i class="fa-regular fa-circle-down" onclick="installApp()"></i>
           </ul>
         </div>
       </div>
@@ -99,7 +99,7 @@
     <div class="d-flex flex-row">
       <div class="title">
         <!-- <i class="fa-sharp fa-solid fa-text">Fitness Apps</i> -->
-        <h1 class="fitAp"><b>Fitness Apps</b></h1>
+        <h1 class="fitAp"><b>Aaptiv</b></h1>
         <p class="container-fluid col-4" style="text-align: center; color: black;">Lorem Ipsum is simply dummy text of
           the printing
           and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
@@ -162,7 +162,7 @@
           aria-label="Slide 6"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active"> 
+        <div class="carousel-item active">
           <p>DEDICATION</p>
           <!-- <img src="src/images/DISCIPLINE/1.png" class="d-block w-50" alt="..."> -->
         </div>
@@ -224,6 +224,13 @@
 <script src="/src/js/feed.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- <script>
+  const programLink = document.getElementById('program-link');
+
+  programLink.addEventListener('click', () => {
+    document.getElementById('program').scrollIntoView();
+  });
+</script> -->
 </body>
 
 </html>

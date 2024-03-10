@@ -78,7 +78,10 @@
 
     <div class="d-flex flex-row col-12 container-fluid">
       <div class="homenyaoffline">
-        <h5 class="isioffline text-center">We're sorry, this page hasn't been cached yet :/</h5>
+        <div class="containerImg">
+          <img src="src/images/logo.png" />
+        </div>
+        <h5 class="isioffline">We're sorry, this page hasn't been cached yet :/</h5>
         <!-- <p class="isioffline">But why don't you go back to our <a href="index.html" style="color: #0a0908;">home pages</a>?</p> -->
       </div>
 
@@ -93,6 +96,11 @@
   <script src="/src/js/promise.js"></script>
   <script src="/src/js/fetch.js"></script>
   <script src="/src/js/app.js"></script>
+  <script>
+    function homePage() {
+        window.location.href = "index.html";
+    }
+  </script>
 </body>
 
 </html>
