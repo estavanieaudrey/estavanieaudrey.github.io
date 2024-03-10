@@ -44,13 +44,14 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body style="background-color: #dcc9b6;">
-  <div class="background">
+<body>
+
+  <body class="backgorund" style="background-color: #ffedd8;">
     <nav class="navbar navbar-expand-lg border-bottom border-body">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="src/images/logo.png" alt="Logo" width="90" height="90"
             class="d-inline-block"></a>
-        <p class="nav-fitme" style="color: #0a0908;"> FitME </p>
+        <p class="nav-fitme" style="color: #0a0908;"> Aaptiv </p>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -61,9 +62,12 @@
               <a class="nav-link nav-link-ltr" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="program-link nav-link nav-link-ltr" href="#program">Programs</a>
+              <a class="program-link nav-link nav-link-ltr" href="#program" style="scroll-behavior: smooth;">Programs</a>
             </li>
-            <i class="fa-regular fa-circle-down" onclick="installApp()"></i>
+            <button class="button">
+              <span class="button-content" onclick="installApp()">Download </span>
+            </button>
+            <!-- <i class="fa-regular fa-circle-down" onclick="installApp()"></i> -->
           </ul>
         </div>
       </div>
@@ -77,8 +81,11 @@
     <div class="d-flex flex-row">
       <div class="title">
         <!-- <i class="fa-sharp fa-solid fa-text">Fitness Apps</i> -->
-        <h1 class="fitAp"><b>Aaptiv</b></h1>
-        <p class="container-fluid col-lg-4 col-sm-12" style="text-align: center; color: black;">Lorem Ipsum is simply dummy text of
+        <!-- <h1 class="fitAp"><b>Aaptiv</b></h1> -->
+        <a href="index.html" class="btn-shine">Aaptiv</a>
+        <p class="container-fluid col-lg-4 col-sm-12" style="text-align: center; color: black; margin-top: 3%;">Lorem
+          Ipsum is simply
+          dummy text of
           the printing
           and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
           an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -86,7 +93,7 @@
     </div>
 
 
-    <div id="carouselExampleIndicators" class="carousel slide m-auto pt-5 w-50" data-bs-ride="carousel"
+    <!-- <div id="carouselExampleIndicators" class="carousel slide m-auto pt-5 w-50" data-bs-ride="carousel"
       style="font-size: 10rem;">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -104,54 +111,70 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <p>DEDICATION</p>
-          <!-- <img src="src/images/DISCIPLINE/1.png" class="d-block w-50" alt="..."> -->
+          <img src="src/images/DISCIPLINE/1.png" class="d-block w-50" alt="...">
         </div>
         <div class="carousel-item">
-          <p>DEDICATION</p>
-          <!-- <img src="src/images/DISCIPLINE/2.png" class="d-block w-50" alt="..."> -->
+          <img src="src/images/DISCIPLINE/2.png" class="d-block w-50" alt="...">
         </div>
         <div class="carousel-item">
-          <p>DEDICATION</p>
-          <!-- <img src="src/images/DISCIPLINE/3.png" class="d-block w-50" alt="..."> -->
+          <img src="src/images/DISCIPLINE/3.png" class="d-block w-50" alt="...">
         </div>
         <div class="carousel-item">
-          <p>DEDICATION</p>
-          <!-- <img src="src/images/DISCIPLINE/4.png" class="d-block w-50" alt="..."> -->
+          <img src="src/images/DISCIPLINE/4.png" class="d-block w-50" alt="...">
         </div>
         <div class="carousel-item">
-          <p>DEDICATION</p>
-          <!-- <img src="src/images/DISCIPLINE/5.png" class="d-block w-50" alt="..."> -->
+          <img src="src/images/DISCIPLINE/5.png" class="d-block w-50" alt="...">
         </div>
         <div class="carousel-item">
-          <p>DEDICATION</p>
-          <!-- <img src="src/images/DISCIPLINE/6.png" class="d-block w-50" alt="..."> -->
+          <img src="src/images/DISCIPLINE/6.png" class="d-block w-50" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
         data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="carousel-control-prev-icon"  style="color: #0a0908;" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
         data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="carousel-control-next-icon"  style="color: #0a0908;" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
+    </div> -->
+
+    <div class="radio-fluid" style="justify-content: center; text-align: center;">
+      <div class="radio-input">
+        <input value="value-1" name="value-radio" id="value-1" type="radio">
+        <label for="value-1">DISCIPLINE</label>
+        <input value="value-2" name="value-radio" id="value-2" type="radio">
+        <label for="value-2">PATIENCE</label>
+        <input value="value-3" name="value-radio" id="value-3" type="radio">
+        <label for="value-3">STAY FOCUSED</label>
+        <input value="value-4" name="value-radio" id="value-4" type="radio">
+        <label for="value-4">DEDICATION</label>
+        <input value="value-5" name="value-radio" id="value-5" type="radio">
+        <label for="value-5">DREAM</label>
+        <input value="value-6" name="value-radio" id="value-6" type="radio">
+        <label for="value-6">PLAN</label>
+        <input value="value-7" name="value-radio" id="value-7" type="radio">
+        <label for="value-7">DREAM</label>
+        <input value="value-8" name="value-radio" id="value-8" type="radio">
+        <label for="value-8">PLAN</label>
+      </div>
     </div>
 
 
+
+
+
     <!-- programs -->
-    <section id="program" style="margin-top: 50px;">
-        <h1 class="prog" style="text-align: center;"><b>Programs</b></h1>
+    <section id="program" style="margin-top: 40px; scroll-behavior: smooth;">
+      <h1 class="prog" style="text-align: center;"><b>Programs</b></h1>
     </section>
 
     <!-- card -->
     <!-- firebase -->
     <div class="d-flex flex-row col-12 justify-content-center flex-wrap" id="shared-moments"></div>
-
-
-  </div>
+  </body>
 </body>
 
 <script defer src="/src/js/material.min.js"></script>

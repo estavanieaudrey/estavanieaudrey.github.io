@@ -14,12 +14,12 @@ function clearCards() {
 function createCard(data, index) {
   sharedMomentsArea.innerHTML += `
   <div class="card col-lg-3 col-md-6 col-sm-12" style="position: relative; max-width: 300px;" onclick="openDetail(${index})">
-    <div class="card-body">
-      <img src="${data.image}" class="img">
-      <h6 style="text-align: center; font-weight: bolder; color: #a9927d; padding-top: 20px;">${data.title}</h6>
-      <div class="card-img-overlay">
-        <h5 class="card-title"><b>${data.title}</b><br>${data.desc}</h5>
+    <div class="main-content">
+      <div class="header">
+        <img src="${data.image}" class="card-img-top">
+        <h6 style="text-align: center; font-weight: bolder;">${data.title}</h6>
       </div>
+      <div class="categories">${data.title}</div>
     </div>
   </div>
 
