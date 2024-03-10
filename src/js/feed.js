@@ -21,10 +21,18 @@ function createCard(data, index) {
       </div>
     </div>
   </div>
+
+  <script>
+    $(".card").hover(function(){
+      $(.card-title).css("filter", "brightness(200%)");
+      }, function(){
+      $(.card-title).css(“filter”, “brightness(100%)”);
+    });
+  </script>
   `;
 }
 
-async function openDetail(index) {
+function openDetail(index) {
   // alert(workouts[index].title)
   // localStorage.judul = workouts[index].title
   // localStorage.image = workouts[index].image
@@ -32,8 +40,7 @@ async function openDetail(index) {
   // localStorage.title = workouts[index].title
 
   // alert(localStorage.posts)
-  const online = await
-    checkOnlineStatus();
+  const online = checkOnlineStatus();
 
   //kalo online cek sek ke local data e ada ato ga
   if (online) {
@@ -71,9 +78,9 @@ async function openDetail(index) {
 }
 
 
-  // window.location.href = '../detail.html'
+// window.location.href = '../detail.html'
 
-  // myModal.show();
+// myModal.show();
 //}
 
 function checkOnlineStatus() {
@@ -102,15 +109,15 @@ fetch(url)
     for (var key in data) {
       workouts.push(data[key]);
     }
-    // for (var i = 0; i < workouts.length; i++) {
-    //   writeData("posts", workouts[i]);
-    // }
+    for (var i = 0; i < workouts.length; i++) {
+      writeData("posts", workouts[i]);
+    }
     // workouts = data; //ambil dari firebase
     updateUI(workouts);
-  });
-// .catch(function () {
-//   window.location.href = "offline.html";
-// });
+  })
+  // .catch(function (error) {
+  //   window.location.href = "offline.html";
+  // });
 
 
 if ('indexedDB' in window) {
