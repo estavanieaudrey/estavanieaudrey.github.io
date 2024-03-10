@@ -66,9 +66,11 @@ fetch(url)
     }
     // workouts = data; //ambil dari firebase
     updateUI(workouts); 
-  }).catch(function(){
-    window.location.href = "offline.html";
-  });
+  })
+  
+  // .catch(function(){
+  //   window.location.href = "offline.html";
+  // });
   
 
 if ('indexedDB' in window) {

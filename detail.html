@@ -46,13 +46,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body style="background-color: #dcc9b6;">
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-black border-bottom border-body"
-        style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-expand-lg border-bottom border-body">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="src/images/logo.png" alt="Logo" width="90" height="90"
-                    class="d-inline-block"> FitME</a>
+                    class="d-inline-block"></a>
+            <p class="nav-fitme" style="color: #0a0908;"> FitME </p>
+            <button class="btn btn-outline-primary" onclick="homePage()">back</button>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -60,12 +61,12 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active nav-link-ltr" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link nav-link-ltr" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-ltr" href="#">Programs</a>
+                        <a class="nav-link nav-link-ltr" href="#program">Programs</a>
                     </li>
-                    <button class="btn btn-outline-primary" onclick="installApp()">Instal</button>
+                    <button class="btn btn-outline-dark" onclick="installApp()">Instal</button>
                 </ul>
             </div>
         </div>
@@ -75,17 +76,17 @@
     <!-- isi -->
 
     <div class="d-flex flex-row col-12">
-        <button class="btn btn-outline-primary" onclick="homePage()">back</button>
-        <h1 class="detailTitle">
+        <div class="homenyadetail">
+            <div class="detailTitle"></div>
+            <div class="detailImg container-fluid col-4"></div>
+            <div class="detailDesc container-fluid col-4"></div>
+        </div>
 
-        </h1>
-
-        <a class="detailImg"></a>
-
-        <p class="detailDesc">
-
-        </p>
-
+        <!-- <div class="card col-3 p-2 m-4" style="position: relative;" onclick="openDetail(${index})">
+            <div class="card-body">
+                <div class="detailImg card-img-top"></div>
+            </div>
+        </div> -->
     </div>
 </body>
 

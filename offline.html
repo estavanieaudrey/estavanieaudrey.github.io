@@ -1,15 +1,16 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>PWAGram</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css">
+    href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css">
   <link rel="stylesheet" href="/src/css/app.css">
   <link rel="manifest" href="/manifest.json">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -27,52 +28,71 @@
   <meta name="msapplication-TileImage" content="/src/images/icons/app-icon-144x144.png">
   <meta name="msapplication-TileColor" content="#fff">
   <meta name="theme-color" content="#3f51b5">
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" href="src/css/style.css">
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
 
-<div id="app">
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-        <span class="mdl-layout-title">PWAGram</span>
-        <!-- Add spacer, to align navigation to the right -->
-        <div class="mdl-layout-spacer"></div>
-        <!-- Navigation. We hide it in small screens. -->
-        <nav class="mdl-navigation mdl-layout--large-screen-only">
-          <a class="mdl-navigation__link" href="/">Feed</a>
-          <a class="mdl-navigation__link" href="/help">Help</a>
-          <div class="drawer-option">
-            <button class="enable-notifications mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--accent">
-              Enable Notifications
-            </button>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">PWAGram</span>
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="/">Feed</a>
-        <a class="mdl-navigation__link" href="/help">Help</a>
-        <div class="drawer-option">
-          <button class="enable-notifications mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--accent">
-            Enable Notifications
-          </button>
+  <body style="background-color: #dcc9b6;">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg border-bottom border-body">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="src/images/logo.png" alt="Logo" width="90" height="90"
+            class="d-inline-block"></a>
+        <p class="nav-fitme" style="color: #0a0908;"> FitME </p>
+        <button class="btn btn-outline-primary" onclick="homePage()">back</button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link nav-link-ltr" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-ltr" href="#program">Programs</a>
+            </li>
+            <button class="btn btn-outline-dark" onclick="installApp()">Instal</button>
+          </ul>
         </div>
-      </nav>
-    </div>
-    <main class="mdl-layout__content mat-typography">
-      <div class="page-content">
-        <h5 class="text-center mdl-color-text--primary">We're sorry, this page hasn't been cached yet :/</h5>
-        <p>But why don't you try one of our <a href="/">other pages</a>?</p>
       </div>
-    </main>
-  </div>
-</div>
-<script defer src="/src/js/material.min.js"></script>
-<script src="/src/js/promise.js"></script>
-<script src="/src/js/fetch.js"></script>
-<script src="/src/js/app.js"></script>
+    </nav>
+
+
+    <!-- isi -->
+
+    <div class="d-flex flex-row col-12 container-fluid">
+      <div class="homenyaoffline">
+        <h5 class="isioffline text-center">We're sorry, this page hasn't been cached yet :/</h5>
+        <!-- <p class="isioffline">But why don't you go back to our <a href="index.html" style="color: #0a0908;">home pages</a>?</p> -->
+      </div>
+
+      <!-- <div class="card col-3 p-2 m-4" style="position: relative;" onclick="openDetail(${index})">
+            <div class="card-body">
+                <div class="detailImg card-img-top"></div>
+            </div>
+        </div> -->
+    </div>
+  </body>
+  <script defer src="/src/js/material.min.js"></script>
+  <script src="/src/js/promise.js"></script>
+  <script src="/src/js/fetch.js"></script>
+  <script src="/src/js/app.js"></script>
 </body>
+
 </html>
