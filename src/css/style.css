@@ -375,7 +375,9 @@
 }
 
 .nav-fitme {
-    color: #ffffff;
+    color: linear-gradient(82.3deg,
+            #5e503f 10.8%,
+            #a9927d 94.3%);
     font-size: 30px;
 }
 
