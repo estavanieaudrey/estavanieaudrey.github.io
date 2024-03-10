@@ -15,21 +15,15 @@ function createCard(data, index) {
   sharedMomentsArea.innerHTML += `
   <div class="card col-lg-3 col-md-6 col-sm-12" style="position: relative; max-width: 300px;" onclick="openDetail(${index})">
     <div class="card-body">
-      <img src="${data.image}" class="card-img-top">
-      <h6 style="text-align: center; font-weight: bolder; color: #a9927d;">${data.title}</h6>
+      <img src="${data.image}" class="img">
+      <h6 style="text-align: center; font-weight: bolder; color: #a9927d; padding-top: 20px;">${data.title}</h6>
       <div class="card-img-overlay">
         <h5 class="card-title"><b>${data.title}</b><br>${data.desc}</h5>
       </div>
     </div>
   </div>
 
-  <script>
-    $(".card").hover(function(){
-      $(.card-img-top).css("filter", "brightness(50%)");
-      }, function(){
-      $(.card-img-top).css(“filter”, “brightness(100%)”);
-    });
-  </script>
+  
   `;
 }
 
@@ -42,7 +36,7 @@ async function openDetail(index) {
 
   // alert(localStorage.posts)
   const online = await checkOnlineStatus();
-  console.log('halo', online);
+  // console.log('halo', online);
 
   //kalo online cek sek ke local data e ada ato ga
   if (online) {
