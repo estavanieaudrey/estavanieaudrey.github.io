@@ -115,6 +115,7 @@ self.addEventListener('fetch', function (event) {
                     if (event.request.headers.get('accept').includes('text/html')) {
                       return cache.match('/offline.html');
                     }
+                    throw Error('erorrrrrr');
                   });
               });
           }

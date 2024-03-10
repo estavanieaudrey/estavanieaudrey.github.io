@@ -32,7 +32,7 @@ function createCard(data, index) {
   `;
 }
 
-function openDetail(index) {
+async function openDetail(index) {
   // alert(workouts[index].title)
   // localStorage.judul = workouts[index].title
   // localStorage.image = workouts[index].image
@@ -40,12 +40,14 @@ function openDetail(index) {
   // localStorage.title = workouts[index].title
 
   // alert(localStorage.posts)
-  const online = checkOnlineStatus();
+  const online = await checkOnlineStatus();
+  console.log('halo', online);
 
   //kalo online cek sek ke local data e ada ato ga
   if (online) {
     //kalo gada : ditmbhi ke local
     if (!localStorage.getItem(index)) {
+      await getData();
       var id = index;
       var title = workouts[index].title;
       var image = workouts[index].image;
@@ -75,8 +77,39 @@ function openDetail(index) {
       window.location.href = "offline.html";
     }
   }
+
+
+  // if (!localStorage.getItem(index)) {
+  //   var id = index;
+  //   var title = workouts[index].title;
+  //   var image = workouts[index].image;
+  //   var desc = workouts[index].desc;
+
+  //   //set localstorage key index --> isi data
+  //   var tempDataArr = [id, title, image, desc];
+  //   localStorage.setItem("i", index);
+  //   localStorage.setItem(index, JSON.stringify(tempDataArr));
+  //   window.location.href = "detail.html";
+  // }
+  // //kalo ada : ambil dari local href ke detail
+  // else {
+  //   localStorage.setItem("i", index);
+  //   window.location.href = "detail.html";
+  // }
 }
 
+//kalo offline cek sek ke local data e ada ato ga
+function checkoffline(index) {
+  // kalo ada : ambil dari local href ke detail
+  if (localStorage.getItem(index)) {
+    localStorage.setItem("i", index);
+    window.location.href = "detail.html";
+  }
+  // kalo gada : masuk ke offline.html
+  else {
+    window.location.href = "offline.html";
+  }
+}
 
 // window.location.href = '../detail.html'
 
@@ -84,9 +117,7 @@ function openDetail(index) {
 //}
 
 function checkOnlineStatus() {
-  return fetch("https://www.google.com/", { mode: "no-cors" })
-    .then(() => true)
-    .catch(() => false);
+  return navigator.onLine;
 }
 
 function updateUI(data) {
@@ -96,40 +127,45 @@ function updateUI(data) {
   }
 }
 
-var url = 'https://audrey-cee2a-default-rtdb.asia-southeast1.firebasedatabase.app/posts.json';
-var networkDataReceived = false;
+async function getData() {
+  var url = 'https://audrey-cee2a-default-rtdb.asia-southeast1.firebasedatabase.app/posts.json';
+  var networkDataReceived = false;
 
-fetch(url)
-  .then(function (res) {
-    return res.json();
-  })
-  .then(function (data) {
-    networkDataReceived = true;
-    console.log('From web', data);
-    for (var key in data) {
-      workouts.push(data[key]);
-    }
-    for (var i = 0; i < workouts.length; i++) {
-      writeData("posts", workouts[i]);
-    }
-    // workouts = data; //ambil dari firebase
-    updateUI(workouts);
-  })
-  // .catch(function (error) {
-  //   window.location.href = "offline.html";
-  // });
-
-
-if ('indexedDB' in window) {
-  readAllData('posts')
+  await fetch(url)
+    .then(function (res) {
+      return res.json();
+    })
     .then(function (data) {
-      if (!networkDataReceived) {
-        // console.log(data);
-        console.log('From cache', data);
-        updateUI(data);
+      networkDataReceived = true;
+      console.log('From web', data);
+      for (var key in data) {
+        workouts.push(data[key]);
       }
+      for (var i = 0; i < workouts.length; i++) {
+        writeData("posts", workouts[i]);
+      }
+      // workouts = data; //ambil dari firebase
+      updateUI(workouts);
+    })
+    .catch(function (error) {
+      // alert("saaamm");
+      // checkoffline();
+      window.location.href = "offline.html";
     });
+
+
+  if ('indexedDB' in window) {
+    readAllData('posts')
+      .then(function (data) {
+        if (!networkDataReceived) {
+          // console.log(data);
+          console.log('From cache', data);
+          updateUI(data);
+        }
+      });
+  }
 }
+getData();
 
 
 // const url = 'https://audrey-cee2a-default-rtdb.asia-southeast1.firebasedatabase.app/posts.json';
