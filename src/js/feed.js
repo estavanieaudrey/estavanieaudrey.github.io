@@ -13,21 +13,21 @@ function clearCards() {
 
 function createCard(data, index) {
   sharedMomentsArea.innerHTML += `
-  <div class="card col-3 p-2 m-4" style="position: relative;" onclick="openDetail(${index})">
+  <div class="card col-lg-3 col-md-6 col-sm-12" style="position: relative; max-width: 300px;" onclick="openDetail(${index})">
     <div class="card-body">
       <img src="${data.image}" class="card-img-top">
-      ${data.title}
+      <h6 style="text-align: center; font-weight: bolder; color: #a9927d;">${data.title}</h6>
       <div class="card-img-overlay">
-        <h5 class="card-title"><b>${data.title}</b><br>${data.subtitle}</h5>
+        <h5 class="card-title"><b>${data.title}</b><br>${data.desc}</h5>
       </div>
     </div>
   </div>
 
   <script>
     $(".card").hover(function(){
-      $(.card-title).css("filter", "brightness(200%)");
+      $(.card-img-top).css("filter", "brightness(50%)");
       }, function(){
-      $(.card-title).css(“filter”, “brightness(100%)”);
+      $(.card-img-top).css(“filter”, “brightness(100%)”);
     });
   </script>
   `;
