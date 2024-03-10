@@ -51,10 +51,10 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg border-bottom border-body">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="src/images/logo.png" alt="Logo" width="90" height="90"
+        <!-- <a class="navbar-brand" href="#"><img src="src/images/logo.png" alt="Logo" width="90" height="90"
             class="d-inline-block"></a>
-        <p class="nav-fitme" style="color: #0a0908;"> FitME </p>
-        <button class="btn btn-outline-primary" onclick="homePage()">back</button>
+        <p class="nav-fitme" style="color: #0a0908;"> FitME </p> -->
+        <i class="fa-solid fa-left-long" onclick="homePage()"></i>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -67,7 +67,7 @@
             <li class="nav-item">
               <a class="nav-link nav-link-ltr" href="#program">Programs</a>
             </li>
-            <button class="btn btn-outline-dark" onclick="installApp()">Instal</button>
+            <i class="fa-regular fa-circle-down" onclick="installApp()"></i>
           </ul>
         </div>
       </div>
@@ -76,13 +76,13 @@
 
     <!-- isi -->
 
-    <div class="d-flex flex-row col-12 container-fluid">
-      <div class="homenyaoffline">
-        <div class="containerImg">
-          <img src="src/images/logo.png" />
-        </div>
+    <div class="d-flex flex-row container-fluid">
+      <div class="homenyaoffline" style="justify-content: center;">
+        <!-- <div class="containerImg">
+          <img src="src/images/logo.png" class="containergambar">
+        </div> -->
         <h5 class="isioffline">We're sorry, this page hasn't been cached yet :/</h5>
-        <!-- <p class="isioffline">But why don't you go back to our <a href="index.html" style="color: #0a0908;">home pages</a>?</p> -->
+        <p class="isioffline">But why don't you go back to our <a href="index.html" style="color: #0a0908;">home pages</a>?</p>
       </div>
 
       <!-- <div class="card col-3 p-2 m-4" style="position: relative;" onclick="openDetail(${index})">

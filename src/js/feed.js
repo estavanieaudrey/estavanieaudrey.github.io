@@ -16,6 +16,7 @@ function createCard(data, index) {
   <div class="card col-3 p-2 m-4" style="position: relative;" onclick="openDetail(${index})">
     <div class="card-body">
       <img src="${data.image}" class="card-img-top">
+      ${data.title}
       <div class="card-img-overlay">
         <h5 class="card-title"><b>${data.title}</b><br>${data.subtitle}</h5>
       </div>
@@ -150,7 +151,7 @@ async function getData() {
     .catch(function (error) {
       // alert("saaamm");
       // checkoffline();
-      window.location.href = "offline.html";
+      // window.location.href = "offline.html";
     });
 
 
