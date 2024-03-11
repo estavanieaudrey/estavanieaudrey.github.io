@@ -148,7 +148,7 @@
     animation-fill-mode: forwards;
     -webkit-text-size-adjust: none;
     font-weight: 1000;
-    font-size: 10vh !important;
+    font-size: 7.5vh !important;
     text-decoration: none;
     white-space: nowrap;
     font-family: "Poppins", sans-serif;
@@ -378,7 +378,8 @@
     color: linear-gradient(82.3deg,
             #5e503f 10.8%,
             #a9927d 94.3%);
-    font-size: 30px;
+    font-size: 3vh;
+    justify-content: space-between;
 }
 
 .carousel-item {
@@ -396,9 +397,14 @@
     text-transform: uppercase;
     color: #a9927d;
     text-align: center;
-    font-size: 8vh !important;
+    justify-content: center;
+    font-size: 4vh !important;
+    /* font-size: 50% !important; */
     padding: 9vh 9vh;
     font-weight: bolder;
+    place-items: center;
+    min-width: 100vw;
+
 }
 
 .detailImg{
