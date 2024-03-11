@@ -131,6 +131,8 @@
     margin-bottom: 4vh;
     text-align: center;
     color: #a9927d;
+    width: 100vw;
+    min-width: 100vw;
 }
 
 
@@ -154,7 +156,6 @@
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 8vh;
-
 }
 
 @-moz-keyframes shine {

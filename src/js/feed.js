@@ -17,9 +17,8 @@ function createCard(data, index) {
     <div class="main-content">
       <div class="header">
         <img src="${data.image}" class="card-img-top">
-        <h6 style="text-align: center; font-weight: bolder;">${data.title}</h6>
+        <h6 style="text-align: center; font-weight: bolder; font-size: 2.1vh; color: #5e503f;">${data.title}</h6>
       </div>
-      <div class="categories">${data.title}</div>
     </div>
   </div>
 
