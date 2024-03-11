@@ -77,20 +77,14 @@
     <div class="d-flex flex-row col-12">
         <div class="homenyadetail">
             <div class="detailTitle"></div>
-            <div class="detailImg container-fluid col-4"></div>
-            <div class="detailDesc container-fluid col-lg-4 col-sm-12"></div>
+            <div class="detailImg"></div>
+            <div class="detailDesc container-fluid col-lg-5 col-sm-12"></div>
         </div>
-
-        <!-- <div class="card col-3 p-2 m-4" style="position: relative;" onclick="openDetail(${index})">
-            <div class="card-body">
-                <div class="detailImg card-img-top"></div>
-            </div>
-        </div> -->
     </div>
     <script>
         var isi = localStorage.getItem(localStorage.getItem('i'));
         document.querySelector('.detailTitle').innerHTML = JSON.parse(isi)[1];
-        document.querySelector('.detailImg').innerHTML = '<img src="' + JSON.parse(isi)[2]; + '">'
+        document.querySelector('.detailImg').innerHTML = '<img src="' + JSON.parse(isi)[2] + '">';
         document.querySelector('.detailDesc').innerHTML = JSON.parse(isi)[3];
     
         function homePage() {
