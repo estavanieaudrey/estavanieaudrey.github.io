@@ -80623,7 +80623,7 @@ a8a(){var s,r,q=this,p=B.d.iU(q.d.a.a),o=B.d.iU(q.e.a.a),n=p.length===0
 if(n&&o.length===0){n=q.c
 n.toString
 A.auq(new A.ae3(),n,t.z)
-return}if(n)p="Tidak ada judul"
+return}if(n)p="Unknown"
 n=q.a.c
 n=n==null?null:n.c
 if(n==null)n=new A.cT(Date.now(),!1)
@@ -80640,11 +80640,11 @@ if(s!=null)this.f.ad5([s])
 s=this.c
 s.toString
 A.eC(s,!1).pw(null)},
-K(a){var s=this,r=null,q=A.cH(s.a.c==null?"Tambah Catatan":"Edit Catatan",r,r,r,r,r,r),p=t.F,o=A.b([],p)
+K(a){var s=this,r=null,q=A.cH(s.a.c==null?"Add Note":"Edit Note",r,r,r,r,r,r),p=t.F,o=A.b([],p)
 if(s.a.c!=null)o.push(A.a1m(r,r,A.Hv(B.CG,r),r,s.ga0r(),r,r,r,r))
-return A.akU(A.anw(o,q),r,new A.cF(B.lN,A.pX(A.b([A.al8(s.d,A.a1F(r,new A.fL(4,B.cK,B.ey),r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Judul",r,r,r,r,r,r,r,r,r,r,r,r,r),1,!1),A.hk(r,20,r),A.al8(s.e,A.a1F(r,new A.fL(4,B.cK,B.ey),r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Isi",r,r,r,r,r,r,r,r,r,r,r,r,r),r,!1),A.hk(r,20,r),A.aoH(A.cH("Save",r,r,r,r,r,r),s.ga89(),A.aoI(r,r,r,r,r,r,r,r,r,r,r,r,new A.aA(50,15,50,15),r,r,r,r,A.el(r,r,r,r,r,r,r,r,r,r,r,18,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r))],p),B.cP,B.c4,B.dX),r),r)}}
+return A.akU(A.anw(o,q),r,new A.cF(B.lN,A.pX(A.b([A.al8(s.d,A.a1F(r,new A.fL(4,B.cK,B.ey),r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Title",r,r,r,r,r,r,r,r,r,r,r,r,r),1,!1),A.hk(r,20,r),A.al8(s.e,A.a1F(r,new A.fL(4,B.cK,B.ey),r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Contents",r,r,r,r,r,r,r,r,r,r,r,r,r),r,!1),A.hk(r,20,r),A.aoH(A.cH("Save",r,r,r,r,r,r),s.ga89(),A.aoI(r,r,r,r,r,r,r,r,r,r,r,r,new A.aA(50,15,50,15),r,r,r,r,A.el(r,r,r,r,r,r,r,r,r,r,r,18,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r))],p),B.cP,B.c4,B.dX),r),r)}}
 A.ae3.prototype={
-$1(a){var s=null,r=A.cH("Maaf,",s,s,s,A.el(s,s,B.j,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),q=A.cH("Isi catatan tidak boleh kosong!",s,s,s,A.el(s,s,B.j,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s)
+$1(a){var s=null,r=A.cH("Sorry,",s,s,s,A.el(s,s,B.j,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),q=A.cH("Notes cannot be Empty!",s,s,s,A.el(s,s,B.j,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s)
 return A.anr(A.b([A.Lo(A.cH("OK",s,s,s,A.el(s,s,B.j,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),new A.ae2(a),s)],t.F),B.GD,q,r)},
 $S:167}
 A.ae2.prototype={
@@ -80663,8 +80663,8 @@ A.a0Q.prototype={
 $1(a){return new A.lG(null,null,null)},
 $S:168}
 A.a0V.prototype={
-$1(a){var s=null,r=A.cH("Ubah PIN",s,s,s,s,s,s),q=A.cH("Apakah Anda ingin mengubah PIN?",s,s,s,s,s,s)
-return A.anr(A.b([A.Lo(A.cH("Tidak",s,s,s,s,s,s),new A.a0T(a),s),A.Lo(A.cH("Ya",s,s,s,s,s,s),new A.a0U(this.a,a),s)],t.F),s,q,r)},
+$1(a){var s=null,r=A.cH("Change PIN",s,s,s,s,s,s),q=A.cH("Do you want to change your PIN?",s,s,s,s,s,s)
+return A.anr(A.b([A.Lo(A.cH("No",s,s,s,s,s,s),new A.a0T(a),s),A.Lo(A.cH("Yes",s,s,s,s,s,s),new A.a0U(this.a,a),s)],t.F),s,q,r)},
 $S:167}
 A.a0T.prototype={
 $0(){A.eC(this.a,!1).dC()},
@@ -80687,14 +80687,14 @@ else if(a==="change_pin")s.a.a8Z(s.b)},
 $S:61}
 A.a10.prototype={
 $1(a){var s=null,r=t.N
-return A.b([A.aq6(A.cH("Logout",s,s,s,s,s,s),"logout",r),A.aq6(A.cH("Ganti PIN",s,s,s,s,s,s),"change_pin",r)],t.Do)},
+return A.b([A.aq6(A.cH("Logout",s,s,s,s,s,s),"logout",r),A.aq6(A.cH("Change PIN",s,s,s,s,s,s),"change_pin",r)],t.Do)},
 $S:467}
 A.a12.prototype={
 $3(a,b,c){var s,r,q,p=null,o="Box has already been closed."
 if(!b.f)A.N(A.dy(o))
 s=b.e
 s===$&&A.a()
-if(J.hA(s.zA().a))return A.n4(A.cH("Tidak ada catatan.",p,p,p,p,p,p),p,p)
+if(J.hA(s.zA().a))return A.n4(A.cH("No note.",p,p,p,p,p,p),p,p)
 if(!b.f)A.N(A.dy(o))
 s=b.e.c
 r=s.$ti
@@ -80720,9 +80720,9 @@ A.a1_.prototype={
 $2(a,b){var s,r,q=null,p="yyyy-MM-dd HH:mm:ss",o=this.b[b],n=o.b,m=o.a
 o=A.cH(n.a,q,q,q,q,q,q)
 s=n.c
-s=A.cH("Dibuat: "+A.ao0(p).t7(s),q,q,q,q,q,q)
+s=A.cH("Created: "+A.ao0(p).t7(s),q,q,q,q,q,q)
 r=n.d
-return new A.pJ(4,new A.aA(16,8,16,8),new A.HY(o,A.pX(A.b([s,A.cH("Terakhir diedit: "+A.ao0(p).t7(r),q,q,q,q,q,q)],t.F),B.eL,B.c4,B.dX),new A.a0X(a,n,m),q),q)},
+return new A.pJ(4,new A.aA(16,8,16,8),new A.HY(o,A.pX(A.b([s,A.cH("Last Edited: "+A.ao0(p).t7(r),q,q,q,q,q,q)],t.F),B.eL,B.c4,B.dX),new A.a0X(a,n,m),q),q)},
 $S:471}
 A.a0X.prototype={
 $0(){var s=A.qR(new A.a0W(this.b,this.c),null,t.z)
@@ -80773,14 +80773,14 @@ A.a3z(o,A.qR(new A.ael(),null,t.z))
 case 1:return A.T(q,r)}})
 return A.U($async$v4,r)},
 K(a){var s,r,q,p,o,n,m,l=this,k=null
-if(l.r)s="Buat PIN Baru"
-else s=l.w?"Masukkan PIN Lama":"Masukkan PIN"
+if(l.r)s="Create New PIN"
+else s=l.w?"Enter Old PIN":"Input PIN"
 s=A.cH(s,k,k,k,A.el(k,k,B.j,k,k,k,k,k,k,k,k,24,k,k,B.iB,k,k,!0,k,k,k,k,k,k,k,k),k,k)
 r=A.hk(k,20,k)
 q=l.r
 p=q?l.e:l.d
 o=A.ajD(8)
-q=q?"PIN Baru":"PIN"
+q=q?"New PIN":"PIN"
 n=t.F
 q=A.b([A.al8(p,A.a1F(k,new A.fL(4,o,B.ey),k,k,k,k,k,k,!0,k,k,k,k,k,k,B.j,!0,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,q,k,k,k,k,k,k,k,k,k,k,k,k,k),1,!0),A.hk(k,10,k)],n)
 p=l.x
@@ -80789,7 +80789,7 @@ q=A.pX(q,B.eL,B.c4,B.dX)
 p=A.hk(k,20,k)
 o=l.r
 m=o?l.ga0d():l.gaap()
-return A.akU(k,B.rH,A.n4(new A.cF(B.lN,A.pX(A.b([s,r,q,p,A.aoH(A.cH(o?"Buat PIN":"Masuk",k,k,k,k,k,k),m,A.aoI(k,k,k,k,k,k,k,k,k,k,k,k,new A.aA(50,15,50,15),k,k,k,k,A.el(k,k,k,k,k,k,k,k,k,k,k,18,k,k,k,k,k,!0,k,k,k,k,k,k,k,k),k))],n),B.cP,B.rA,B.dX),k),k,k),k)}}
+return A.akU(k,B.rH,A.n4(new A.cF(B.lN,A.pX(A.b([s,r,q,p,A.aoH(A.cH(o?"Create PIN":"Enter",k,k,k,k,k,k),m,A.aoI(k,k,k,k,k,k,k,k,k,k,k,k,new A.aA(50,15,50,15),k,k,k,k,A.el(k,k,k,k,k,k,k,k,k,k,k,18,k,k,k,k,k,!0,k,k,k,k,k,k,k,k),k))],n),B.cP,B.rA,B.dX),k),k,k),k)}}
 A.aei.prototype={
 $0(){var s=this.a
 if(s.f==null)s.r=!0
@@ -80799,7 +80799,7 @@ A.aem.prototype={
 $0(){this.a.x=""},
 $S:0}
 A.aen.prototype={
-$0(){this.a.x="PIN harus minimal 4 digit!"},
+$0(){this.a.x="PIN must be at least 4 digits!"},
 $S:0}
 A.aeo.prototype={
 $0(){var s=this.a
@@ -80810,13 +80810,13 @@ A.aep.prototype={
 $1(a){return A.ap9()},
 $S:128}
 A.aeq.prototype={
-$0(){this.a.x="PIN salah!"},
+$0(){this.a.x="Wrong PIN!"},
 $S:0}
 A.aej.prototype={
 $0(){this.a.x=""},
 $S:0}
 A.aek.prototype={
-$0(){this.a.x="PIN baru harus minimal 4 digit!"},
+$0(){this.a.x="New PIN must be at least 4 digits!"},
 $S:0}
 A.ael.prototype={
 $1(a){return A.ap9()},
